@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Dynamically Changing Element Attributes</title>
+  <script language="Javascript" type="text/javascript">
+   function Highlight(Element)
+ 			{
+ 			 Element.style.color = "blue"
+ 			 Element.style.backgroundColor = 'silver'
+ 			}
+  </script>
+ </head>
+ <body>
+  <FORM name="Contact" action="http://www.jimkeogh.com" method="post">
+   <P>
+    First Name : <INPUT value="Bob"   type="text" name="Fname" onchange="Highlight(this)"/>
+    <BR>
+    Last Name  : <INPUT value="Smith" type="text" name="Lname" onchange="Highlight(this)"/> 
+    <BR>
+    Email: <INPUT value="bsmith@mcgrawhill.com" type="text" name="Email" onchange="Highlight(this)"/>
+    <BR>
+    <INPUT name="Submit" value="submit" type="submit"/>
+    <INPUT name="Reset"  value="Method" type="reset"/>
+   </P>
+  </FORM>
+ </body>
+</html>

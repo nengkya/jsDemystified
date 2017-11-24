@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+  <title>Dynamically Change Option List</title>
+  <script language="Javascript" type="text/javascript">
+   function ResetOptionList(ElementValue)
+ 			{
+ 			 with (document.forms.Contact)
+ 				  {
+ 				   if (ElementValue == 1)
+ 					  {
+ 					   OptionList [0].text  = "Classic"
+ 					   OptionList [0].value = 1
+ 					   OptionList [1].text  = "Police Cruiser"
+ 					   OptionList [1].value = 2
+ 					  }
+ 				   if (ElementValue == 2)
+ 					  {
+ 					   OptionList [0].text  = "Ford"
+ 					   OptionList [0].value = 1
+ 					   OptionList [1].text  = "Chevy"
+ 					   OptionList [1].value = 2
+ 					  }
+ 				  }
+ 			}
+  </script>
+ </head>
+ <body>
+  <form name = "a" method = "post">
+   <select name = "z">
+    <option value = 1 > Volvo </option>
+    <option value = 2 > Saab  </option>
+    <option value = 3 > Opel  </option>
+    <option value = 4 > Audi  </option>
+   </select>
+  </form>
+  <FORM name="Contact" action="http://www.jimkeogh.com" method="post">
+   <P>
+    <select name = "OptionList" size = "2">
+     <option Value = 1> Classic
+     <option Value = 2> Police Cruiser
+     <option Value = 3> Police
+    </select>
+    <BR>
+    <INPUT TYPE = "radio"  name = "vehicles" checked = "true" value = 1 onclick = "ResetOptionList(this.value)"> Motorcycles
+    <INPUT TYPE = "radio"  name = "vehicles"                  Value = 2 onclick = "ResetOptionList(this.value)"> Cars
+    <BR>
+    <INPUT type = "submit" name = "Submit" value ="Submit" />
+    <INPUT type = "reset"  name = "Reset"  value ="Reset" >
+   </P>
+  </FORM>
+ </body>
+</html>
