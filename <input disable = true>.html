@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+ <head>
+  <title>Disabled</title>
+  <script language="Javascript" type="text/javascript">
+   function EnableEmail()
+ 	        {
+ 		     with (document.forms.Contact)
+ 			      {
+ 				   if (Fname.value.length > 0 && Lname.value.length > 0)
+ 				      {
+					   Email.disabled = false
+ 					  }
+ 				  }
+		    }
+  </script>
+ </head>
+ 
+ <body>
+  <FORM name="Contact" action="http://www.jimkeogh.com" method="post">
+   <P>
+    First Name : <INPUT type="text" name="Fname" onchange = "EnableEmail()"/> <BR>
+    Last Name  : <INPUT type="text" name="Lname" onchange = "EnableEmail()"/> <BR>
+    Email      : <INPUT type="text" name="Email" disabled = true/> <BR>
+    <INPUT name="Submit" value="Submit" type="submit"/>
+    <INPUT name="Reset"  value="Reset"  type="reset">
+   </P>
+  </FORM>
+ </body>
+
+</html>
